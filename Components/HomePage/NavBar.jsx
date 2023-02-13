@@ -3,7 +3,7 @@ import React from "react";
 
 export default function NavBar() {
     return(
-        <ul className=" gap-4 p-4 items-center flex-row-reverse flex h-[11%] absolute w-full z-10">
+        <ul className="gap-4 p-4 items-center flex-row-reverse flex h-[11%] fixed w-full z-100">
             <li className="relative h-[105%] aspect-square">
                 <Image
                 src="/Images/FlipperPFP.png"
