@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Flipper's Portfolio</title>
+        <title>Flipper&apos;s Portfolio</title>
         <meta name="description" content="Flippergail&apos;s official portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Images/FlipperPFP.png" />
