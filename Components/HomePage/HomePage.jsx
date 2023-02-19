@@ -11,8 +11,8 @@ export default function HomePage() {
                 className="-z-10"
             />
             
-            <p className="fixed text-text text-5xl leading-tight font-semibold mt-[11%] ml-[12%]">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
-            <div className="relative h-[70%] aspect-[791/597] ml-[40%]" >
+            <p className="absolute text-text text-5xl leading-tight font-semibold mt-[11%] ml-[12%]">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
+            <div className="relative h-[70%] aspect-[791/597] ml-[42%]" >
                 <Image
                     src="/Images/LaptopGrad.png"
                     alt="Laptop Gradient Vector"
