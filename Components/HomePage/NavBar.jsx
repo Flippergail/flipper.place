@@ -9,7 +9,7 @@ export default function NavBar() {
     }
     return(
         <div className="p-4 justify-between items-center flex flex-row h-[4.5rem] md:h-13 lg:h-[4.5rem] fixed w-full z-50 backdrop-blur-md">
-            <div className="relative hover:animate-spin">
+            <div className="relative md:hover:animate-spin">
                 <Image
                     src="/Images/FlipperPFP.png"
                     alt="PFP"
