@@ -15,7 +15,7 @@ export default function NavBar() {
                     alt="PFP"
                     width={64}
                     height={64}
-                    priority={true}
+                    priority
                 />
             </div>
 
