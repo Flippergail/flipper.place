@@ -12,7 +12,7 @@ export default function HomePage() {
                 priority
             />
             
-            <p className=" ml-12 lg:ml-48 mt-24 lg:mt-44 text-text text-4xl md:text-3xl lg:text-5xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
+            <p className=" ml-12 lg:ml-48 mt-24 lg:mt-44 text-text text-4xl md:text-2xl lg:text-5xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
 
             <div className="relative lg:mt-24 overflow-hidden">
                 <Image

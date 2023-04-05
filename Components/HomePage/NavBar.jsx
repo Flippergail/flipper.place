@@ -1,14 +1,17 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 export default function NavBar() {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-    const toggleMenu = () => {
-      setIsOpen(!isOpen)
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen)
     }
+    const mobileMenuRef = useRef(null)
+
     return(
         <div className="p-4 justify-between items-center flex flex-row h-[4.5rem] md:h-13 lg:h-[4.5rem] fixed w-full z-50 backdrop-blur-md">
+            { !isMobileMenuOpen && (<>
             <div className="relative md:hover:animate-spin">
                 <Image
                     src="/Images/FlipperPFP.png"
@@ -21,7 +24,7 @@ export default function NavBar() {
 
             <p className="md:self-center text-text text-3xl md:text-5xl font-semibold">flipper.place</p>
             
-            <nav>
+            <nav class="hidden md:block">
                 <ul className="list-none flex gap-3 relative">
                     <li className="group">
                         <a className="text-text text-l font-semibold" href="#Home">Home</a>
@@ -37,6 +40,51 @@ export default function NavBar() {
                     </li>
                 </ul>
             </nav>
+
+            <div class="flex items-center md:hidden">
+                <button class="text-white text-4xl font-bold opacity-70 hover:opacity-100 duration-300" onClick={toggleMobileMenu}>
+                    <div className="relative md:hover:animate-spin">
+                        <Image
+                            src="/Images/BurgerMenu.png"
+                            alt="Burger Menu"
+                            width={40}
+                            height={40}
+                            priority
+                        />
+                    </div>
+                </button>
+            </div>
+            </>)}
+            
+            { isMobileMenuOpen && (<div ref={mobileMenuRef} class="fixed container h-full w-full flex items-center z-50">
+                <ul class="w-full h-full items-center p-8
+                    mrelative flex justify-between md:bg-transparent flex-row md:space-x-6">
+
+                    <li>
+                        <a class="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300" href="#Home">Home</a>
+                    </li>
+                    <li>
+                        <a class="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300" href="#Projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300" href="#About">About</a>
+                    </li>
+                    
+                    <li class="flex items-center">
+                        <button class="text-white text-4xl font-bold opacity-70 hover:opacity-100 duration-300" onClick={toggleMobileMenu}>
+                            <div className="relative">
+                                <Image
+                                    src="/Images/BurgerMenu.png"
+                                    alt="Burger Menu"
+                                    width={40}
+                                    height={40}
+                                    priority
+                                />
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </div>)}
         </div>
     )
 }
