@@ -3,7 +3,7 @@ import React from "react";
 
 export default function HomePage() {
     return(
-        <div className="relative h-screen w-full flex flex-col md:flex-row align-middle" id="Home">
+        <div className="relative h-screen w-full flex flex-col md:flex-row align-middle overflow-hidden" id="Home">
             <Image
                 src="/Images/HomePageBG.png"
                 alt="Background Image"
@@ -12,9 +12,11 @@ export default function HomePage() {
                 priority
             />
             
-            <p className=" ml-12 lg:ml-48 mt-24 lg:mt-44 text-text text-4xl md:text-2xl lg:text-5xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
+            <p className=" ml-12 lg:ml-52 mt-24 lg:mt-44 text-text text-4xl md:hidden lg:block lg:text-5xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
 
-            <div className="relative lg:mt-24 overflow-hidden">
+            <p className=" hidden md:block lg:hidden ml-12 mt-24 text-text text-4xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
+
+            <div className="relative md:mt-8 lg:mt-24">
                 <Image
                     src="/Images/LaptopGrad.png"
                     alt="Laptop Gradient Vector"
