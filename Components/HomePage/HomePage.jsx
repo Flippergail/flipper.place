@@ -14,7 +14,7 @@ export default function HomePage() {
             
             <p className=" ml-12 lg:ml-52 mt-24 lg:mt-44 text-text text-4xl md:hidden lg:block lg:text-5xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
 
-            <p className=" hidden md:block lg:hidden ml-12 mt-16 text-text text-4xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
+            <p className=" hidden md:block lg:hidden ml-12 mt-16 text-text text-3xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
 
             <div className="relative md:mt-8 lg:mt-24">
                 <Image
