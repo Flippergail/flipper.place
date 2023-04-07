@@ -10,7 +10,7 @@ export default function NavBar() {
     const mobileMenuRef = useRef(null)
 
     return(
-        <div className="p-4 justify-between items-center flex flex-row h-[4.5rem] md:h-13 lg:h-[4.5rem] fixed w-full z-50 backdrop-blur-md">
+        <div className="p-4 lg:p-2 justify-between items-center flex flex-row h-[4.5rem] md:h-13 lg:h-20 fixed w-full z-50 backdrop-blur-md">
             { !isMobileMenuOpen && (<>
             <div className="relative md:hover:animate-spin">
                 <Image
@@ -24,18 +24,18 @@ export default function NavBar() {
 
             <p className="md:self-center text-text text-3xl md:text-5xl font-semibold">flipper.place</p>
             
-            <nav class="hidden md:block">
-                <ul className="list-none flex gap-3 relative">
-                    <li className="group">
-                        <a className="text-text text-l font-semibold" href="#Home">Home</a>
+            <nav class="hidden md:block items-center">
+                <ul className="list-none flex gap-3 relative items-center">
+                    <li className="group items-center">
+                        <a className="text-text text-l lg:text-2xl font-semibold" href="#Home">Home</a>
                         <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text"/>
                     </li>
-                    <li className="group">
-                        <a className="text-text text-l font-semibold" href="#Projects">Projects</a>
+                    <li className="group items-center">
+                        <a className="text-text text-l lg:text-2xl font-semibold" href="#Projects">Projects</a>
                         <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text"/>
                     </li>
-                    <li className="group">
-                        <a className="text-text text-l font-semibold" href="#About">About</a>
+                    <li className="group items-center">
+                        <a className="text-text text-l lg:text-2xl font-semibold" href="#About">About</a>
                         <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text"/>
                     </li>
                 </ul>
