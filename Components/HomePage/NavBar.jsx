@@ -12,7 +12,7 @@ export default function NavBar() {
     const mobileMenuRef = useRef(null)
 
     return(
-        <div className="p-4 lg:p-2 justify-between items-center flex flex-row h-[4.5rem] md:h-13 lg:h-20 fixed w-full z-50 backdrop-blur-md">
+        <div className="p-4 lg:p-3 justify-between items-center flex flex-row h-[4.5rem] md:h-13 lg:h-[5.4rem] fixed w-full z-50 backdrop-blur-md">
             { !isMobileMenuOpen && (<>
             <div className="relative lg:hover:animate-spin">
                 <Image
@@ -30,15 +30,15 @@ export default function NavBar() {
                 <ul className="list-none flex gap-3 relative items-center">
                     <li className="group items-center">
                         <a className="text-text text-l lg:text-2xl font-semibold" href="#Home">Home</a>
-                        <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text"/>
+                        <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text duration-200"/>
                     </li>
                     <li className="group items-center">
                         <a className="text-text text-l lg:text-2xl font-semibold" href="#Projects">Projects</a>
-                        <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text"/>
+                        <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text duration-200"/>
                     </li>
                     <li className="group items-center">
                         <a className="text-text text-l lg:text-2xl font-semibold" href="#About">About</a>
-                        <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text"/>
+                        <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text duration-200"/>
                     </li>
                 </ul>
             </nav>
