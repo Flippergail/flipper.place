@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React, { useState, useRef } from "react";
+import BurgerMenu from '/public/Images/BurgerMenu.svg';
+import ExitButton from '/public/Images/ExitButton.svg';
 
 export default function NavBar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -12,7 +14,7 @@ export default function NavBar() {
     return(
         <div className="p-4 lg:p-2 justify-between items-center flex flex-row h-[4.5rem] md:h-13 lg:h-20 fixed w-full z-50 backdrop-blur-md">
             { !isMobileMenuOpen && (<>
-            <div className="relative md:hover:animate-spin">
+            <div className="relative lg:hover:animate-spin">
                 <Image
                     src="/Images/FlipperPFP.png"
                     alt="PFP"
@@ -45,7 +47,7 @@ export default function NavBar() {
                 <button class="text-white text-4xl font-bold opacity-70 hover:opacity-100 duration-300" onClick={toggleMobileMenu}>
                     <div className="relative md:hover:animate-spin">
                         <Image
-                            src="/Images/BurgerMenu.png"
+                            src={BurgerMenu}
                             alt="Burger Menu"
                             width={40}
                             height={40}
@@ -74,8 +76,8 @@ export default function NavBar() {
                         <button class="text-white text-4xl font-bold opacity-70 hover:opacity-100 duration-300" onClick={toggleMobileMenu}>
                             <div className="relative">
                                 <Image
-                                    src="/Images/BurgerMenu.png"
-                                    alt="Burger Menu"
+                                    src={ExitButton}
+                                    alt="Exit Button"
                                     width={40}
                                     height={40}
                                     priority

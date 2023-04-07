@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import MeshGradient from 'mesh-gradient.js';
+import DownArrow from '/public/Images/DownArrow.svg';
 
 import { Gradient } from './Gradient.js'
 
@@ -25,7 +25,7 @@ export default function HomePage() {
             {/* ml-12 mt-16*/}
             <p className=" hidden md:block lg:hidden text-text text-3xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
 
-            <div className="relative animate-float mt-8 md:mt-0">
+            <div className="relative animate-float mt-8">
                 <Image
                     src="/Images/LaptopGrad.png"
                     alt="Laptop Gradient Vector"
@@ -35,6 +35,18 @@ export default function HomePage() {
                     priority
                 />
             </div>
+
+            <button class="md:absolute bottom-0 right-[50%] self-center md:place-self-end animate-bounce text-4xl font-bold opacity-70 hover:bg-[#950EAB] rounded-full duration-300">
+                <div className="relative">
+                    <Image
+                        src={DownArrow}
+                        alt="Down Arrow"
+                        width={64}
+                        height={64}
+                        priority
+                    />
+                </div>
+            </button>
         </div>
     )
 }
