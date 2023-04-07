@@ -21,7 +21,7 @@ export default function HomePage() {
             <canvas className="absolute -z-50" id="gradient-canvas" data-transition-in />
             <p className="pt-5 lg:pt-0 text-text text-4xl md:hidden lg:block lg:text-6xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
             
-            <p className="pt-4 hidden md:block lg:hidden text-text text-3xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
+            <p className="pt-6 hidden md:block lg:hidden text-text text-3xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
 
             <div className="relative animate-float">
                 <Image
