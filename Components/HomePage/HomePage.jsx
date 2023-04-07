@@ -20,7 +20,7 @@ export default function HomePage() {
             />*/}
             <canvas className="absolute -z-50" id="gradient-canvas" data-transition-in />
             {/* ml-12 mt-24 lg:m-0*/}
-            <p className="text-text text-4xl md:hidden lg:block lg:text-5xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
+            <p className="text-text text-4xl md:hidden lg:block lg:text-6xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
             
             {/* ml-12 mt-16*/}
             <p className=" hidden md:block lg:hidden text-text text-3xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
