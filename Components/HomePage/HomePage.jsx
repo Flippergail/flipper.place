@@ -36,7 +36,7 @@ export default function HomePage() {
                 />
             </div>
 
-            <button class="md:absolute bottom-0 right-[50%] self-center md:place-self-end animate-bounce text-4xl font-bold opacity-70 hover:bg-[#950EAB] rounded-full duration-300">
+            <button class="absolute bottom-0 md:right-[50%] self-center md:place-self-end animate-bounce text-4xl font-bold opacity-70 hover:bg-[#950EAB] rounded-full duration-300">
                 <div className="relative">
                     <Image
                         src={DownArrow}
