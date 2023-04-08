@@ -29,15 +29,18 @@ export default function NavBar() {
             <nav className="hidden md:block items-center">
                 <ul className="list-none flex gap-3 relative items-center">
                     <li className="group items-center">
-                        <a className="text-text text-l lg:text-2xl font-semibold" href="#Home">Home</a>
+                        <a className="text-text text-l lg:text-2xl font-semibold" 
+                        onClick={()=>document.getElementById("Home").scrollIntoView({behavior: "smooth"})}>Home</a>
                         <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text duration-200"/>
                     </li>
                     <li className="group items-center">
-                        <a className="text-text text-l lg:text-2xl font-semibold" href="#Projects">Projects</a>
+                        <a className="text-text text-l lg:text-2xl font-semibold" 
+                        onClick={()=>document.getElementById("Projects").scrollIntoView({behavior: "smooth"})}>Projects</a>
                         <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text duration-200"/>
                     </li>
                     <li className="group items-center">
-                        <a className="text-text text-l lg:text-2xl font-semibold" href="#About">About</a>
+                        <a className="text-text text-l lg:text-2xl font-semibold" 
+                        onClick={()=>document.getElementById("About").scrollIntoView({behavior: "smooth"})}>About</a>
                         <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text duration-200"/>
                     </li>
                 </ul>
