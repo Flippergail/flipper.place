@@ -8,7 +8,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500&display=swap" rel="stylesheet"/>
       </Head>
-      <body className="w-full h-full">
+      <body className="w-full h-full" data-hijacking="on" data-animation="scaleDown">
         <Main />
         <NextScript />
       </body>
