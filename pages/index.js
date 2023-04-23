@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -8,9 +8,14 @@ import HomePage from "/Components/HomePage/HomePage"
 import ProjectsPage from '/Components/ProjectsPage/ProjectsPage'
 import ExperiencePage from '/Components/ExperiencePage/ExperiencePage'
 import AboutPage from '/Components/AboutPage/AboutPage'
+import DownArrow from '/public/Images/DownArrow.svg';
 
 const Projects = require('/Components/ProjectsPage/Projects.js');
 const sections = [{title: "Home"}, ...Projects];
+
+const downArrowPressed = () => {
+  document.getElementById("Projects").scrollIntoView({behavior: "smooth"});
+}
 
 export default function Home() {
   useEffect(() => {
@@ -27,6 +32,20 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [showDownArrow, setShowDownArrow] = useState(true);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > window.innerHeight-1) {
+        setShowDownArrow(false);
+      } else {
+        setShowDownArrow(true);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
       <Head>
@@ -39,6 +58,16 @@ export default function Home() {
         <NavBar/>
         <HomePage/>
         <ProjectsPage/>
+        {showDownArrow && (<button onClick={downArrowPressed} className="fixed bottom-0 right-[40%] md:right-[50%] self-center md:place-self-end
+            animate-bounce text-4xl font-bold opacity-70 hover:bg-[#950EAB] rounded-full duration-300">
+                <Image
+                    src={DownArrow}
+                    alt="Down Arrow"
+                    width={64}
+                    height={64}
+                    priority
+                />
+        </button>)}
       </main>
     </>
   )
