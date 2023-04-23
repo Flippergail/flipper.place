@@ -10,7 +10,7 @@ export default function ProjectsPage() {
         return Projects.map(project => {
             return(
                 <div className="flex flex-col md:flex-row items-center justify-center w-full h-screen
-                 bg-cover bg-center z-10 bg-gradient-to-[#330088] md:bg-none from-[#6A0885]" key={project.title} id={project.title}>
+                 bg-cover bg-center z-10 bg-gradient-to-[#330088] from-[#6A0885] md:bg-none" key={project.title} id={project.title}>
                     <div className="relative flex flex-col items-center md:max-w-5xl justify-center h-full">
                         <a href={project.link}>
                             <h1 className="underline decoration-4 text-4xl lg:text-5xl font-bold
