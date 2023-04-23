@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import DownArrow from '/public/Images/DownArrow.svg';
 
 import { Gradient } from './Gradient.js'
@@ -12,9 +12,10 @@ export default function HomePage() {
     useEffect(() => {
         const gradient = new Gradient()
         gradient.initGradient('#gradient-canvas')
-      }, [])
+    }, [])
     return(
-        <div className="lg:space-x-20 relative h-screen w-full flex flex-col md:flex-row items-center justify-center overflow-hidden" id="Home">
+        <div className="lg:space-x-20 h-screen w-full flex flex-col md:flex-row
+         items-center justify-center overflow-hidden" id="Home">
             {/*<Image
                 src="/Images/HomePageBG.png"
                 alt="Background Image"
@@ -22,11 +23,11 @@ export default function HomePage() {
                 className="-z-10 object-cover"
                 priority
             />*/}
-            <canvas className="absolute -z-50" id="gradient-canvas" data-transition-in />
+            <canvas className="absolute" id="gradient-canvas" data-transition-in />
 
-            <p className="pt-6 lg:pt-0 text-text text-4xl md:hidden lg:block lg:text-6xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
+            <p className="z-10 pt-6 lg:pt-0 text-text text-4xl md:hidden lg:block lg:text-6xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
             
-            <p className="pt-8 hidden md:block lg:hidden text-text text-2xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
+            <p className="z-10 pt-8 hidden md:block lg:hidden text-text text-2xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Full Stack Developer living in<br/>the UK.</p>
 
             <div className="relative animate-float">
                 <Image
@@ -40,7 +41,7 @@ export default function HomePage() {
             </div>
 
             <button onClick={downArrowPressed} className="absolute bottom-0 md:right-[50%] self-center md:place-self-end
-             animate-bounce text-4xl font-bold opacity-70 hover:bg-[#950EAB] rounded-full duration-300">
+            animate-bounce text-4xl font-bold opacity-70 hover:bg-[#950EAB] rounded-full duration-300">
                 <Image
                     src={DownArrow}
                     alt="Down Arrow"
@@ -52,3 +53,12 @@ export default function HomePage() {
         </div>
     )
 }
+
+export async function getServerSideProps() {
+    const data = "This is some data from the server";
+    return {
+      props: {
+        data,
+      },
+    };
+  }

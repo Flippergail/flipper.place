@@ -9,7 +9,24 @@ import ProjectsPage from '/Components/ProjectsPage/ProjectsPage'
 import ExperiencePage from '/Components/ExperiencePage/ExperiencePage'
 import AboutPage from '/Components/AboutPage/AboutPage'
 
+const Projects = require('/Components/ProjectsPage/Projects.js');
+const sections = [{title: "Home"}, ...Projects];
+
 export default function Home() {
+  useEffect(() => {
+    const handleScroll = () => {
+      sections.forEach((section) => {
+        const element = document.getElementById(section.title);
+        const { top } = element.getBoundingClientRect();
+        const scale = Math.max(0, 1 - top / window.innerHeight);
+        element.style.transform = `scale(${scale})`;
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -18,13 +35,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Images/FlipperPFP.png" />
       </Head>
-      <main className='select-none'>
+      <main className='bg-[#540083] select-none w-full overflow-hidden'>
         <NavBar/>
         <HomePage/>
         <ProjectsPage/>
-        <ExperiencePage/>
-        <AboutPage/>
       </main>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const data = "This is some data from the server";
+  return {
+    props: {
+      data,
+    },
+  };
 }
