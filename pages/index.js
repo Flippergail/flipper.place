@@ -77,7 +77,7 @@ export default function Home() {
     <>
       <Head>
         <title>Flipper&apos;s Portfolio WIP</title>
-        <meta name="description" content="Flippergail&apos;s official portfolio made using Next.js + Tailwind + react-three-fiber" />
+        <meta name="description" content="Flippergail&apos;s official portfolio made using Next.js + Tailwind" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Images/FlipperPFP.png" />
       </Head>
