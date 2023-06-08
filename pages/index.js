@@ -18,6 +18,34 @@ const downArrowPressed = () => {
 }
 
 export default function Home() {
+  const [showDownArrow, setShowDownArrow] = useState(true);
+  useEffect(() => {
+    function handleScroll() {
+      const handleScrollDebounced = debounce(() => {
+        if (window.scrollY > window.innerHeight - 1) {
+          setShowDownArrow(false);
+        } else {
+          setShowDownArrow(true);
+        }
+      }, 50);
+
+      window.addEventListener('scroll', handleScrollDebounced);
+      return () => window.removeEventListener('scroll', handleScrollDebounced);
+    }
+
+    function debounce(func, delay) {
+      let timeoutId;
+      return function () {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          func.apply(this, arguments);
+        }, delay);
+      };
+    }
+
+    handleScroll();
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       sections.forEach((section) => {
@@ -27,13 +55,12 @@ export default function Home() {
         element.style.transform = `scale(${scale})`;
       });
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const [showDownArrow, setShowDownArrow] = useState(true);
 
   useEffect(() => {
     function handleScroll() {
