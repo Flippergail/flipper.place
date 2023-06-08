@@ -66,13 +66,16 @@ export default function NavBar() {
                     mrelative flex justify-between md:bg-transparent flex-row md:space-x-6">
 
                     <li>
-                        <a className="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300" href="#Home">Home</a>
+                        <a className="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300"
+                        onClick={()=>document.getElementById("Home").scrollIntoView({behavior: "smooth"})}>Home</a>
                     </li>
                     <li>
-                        <a className="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300" href="#Projects">Projects</a>
+                        <a className="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300"
+                        onClick={()=>document.getElementById("Projects").scrollIntoView({behavior: "smooth"})}>Projects</a>
                     </li>
                     <li>
-                        <a className="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300" href="#About">About</a>
+                        <a className="text-text text-2xl font-semibold opacity-70 hover:opacity-100 duration-300"
+                        onClick={()=>document.getElementById("About").scrollIntoView({behavior: "smooth"})}>About</a>
                     </li>
                     
                     <li className="flex items-center">

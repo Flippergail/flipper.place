@@ -9,9 +9,9 @@ export default function ProjectsPage() {
     const renderProjects = () => {
         return Projects.map(project => {
             return(
-                <div className="to-[#330088] from-[#81129F] bg-gradient-to-r via-[#5A178E] flex flex-col md:flex-row items-center justify-center w-full h-screen
+                <div className="rounded-3xl bg-gradient-to-tl from-violet-900 to-pink-800 flex flex-col md:flex-row items-center justify-center w-full h-screen
                  bg-cover bg-center z-10 md:bg-none" key={project.title} id={project.title}>
-                    <div className="relative flex flex-col md:max-w-5xl justify-center h-full">
+                    <div className="relative flex flex-col md:max-w-5xl justify-center h-full mt-24 md:mb-0">
                         <a href={project.link}>
                             <h1 className="underline decoration-4 text-3xl lg:text-4xl font-bold
                             text-fuchsia-200 hover:text-teal-500">{project.title} (Click Me)</h1>
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
                         alt="Chess Engine"
                         height={project.imageHeight}
                         width={project.imageWidth}
-                        className="object-contain rounded-3xl mb-3 md:mb-none"
+                        className="object-contain rounded-3xl mb-24 md:mb-3 md:mb-none"
                         priority
                         />
                     </div>
