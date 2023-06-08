@@ -20,39 +20,58 @@ const downArrowPressed = () => {
 export default function Home() {
   const [showDownArrow, setShowDownArrow] = useState(true);
   useEffect(() => {
-    let isScrolling = false;
-    let lastScrollY = 0;
-
     function handleScroll() {
-      if (!isScrolling) {
-        isScrolling = true;
+      const handleScrollDebounced = debounce(() => {
+        if (window.scrollY > window.innerHeight - 1) {
+          setShowDownArrow(false);
+        } else {
+          setShowDownArrow(true);
+        }
+      }, 50);
 
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-
-          sections.forEach((section) => {
-            const element = document.getElementById(section.title);
-            const { top } = element.getBoundingClientRect();
-            const scale = Math.max(0, 1 - top / window.innerHeight);
-            element.style.transform = `scale(${scale})`;
-          });
-
-          if (currentScrollY > lastScrollY) {
-            setShowDownArrow(false);
-          } else {
-            setShowDownArrow(true);
-          }
-
-          lastScrollY = currentScrollY;
-          isScrolling = false;
-        });
-      }
+      window.addEventListener('scroll', handleScrollDebounced);
+      return () => window.removeEventListener('scroll', handleScrollDebounced);
     }
+
+    function debounce(func, delay) {
+      let timeoutId;
+      return function () {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          func.apply(this, arguments);
+        }, delay);
+      };
+    }
+
+    handleScroll();
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      sections.forEach((section) => {
+        const element = document.getElementById(section.title);
+        const { top } = element.getBoundingClientRect();
+        const scale = Math.max(0, 1 - top / window.innerHeight);
+        element.style.transform = `scale(${scale})`;
+      });
+    };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > window.innerHeight-1) {
+        setShowDownArrow(false);
+      } else {
+        setShowDownArrow(true);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
     <>
