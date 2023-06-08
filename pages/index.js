@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -27,7 +27,11 @@ export default function Home() {
         element.style.transform = `scale(${scale})`;
       });
     };
-    window.addEventListener("scroll", handleScroll);
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (true) {
+      window.addEventListener("scroll", handleScroll);
+    }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -54,7 +58,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Images/FlipperPFP.png" />
       </Head>
-      <main className='bg-[#540083] select-none w-full overflow-hidden'>
+      <main className='to-[#330088] from-[#81129F] bg-gradient-to-r via-[#5A178E] select-none w-full overflow-hidden'>
         <NavBar/>
         <HomePage/>
         <ProjectsPage/>

@@ -5,11 +5,11 @@ import React, { useRef, useEffect } from "react";
 const Projects = require('./Projects.js');
 
 export default function ProjectsPage() {
-    const myElementRef = useRef(null);
+    const myElementRef = useRef(false);
     const renderProjects = () => {
         return Projects.map(project => {
             return(
-                <div className="bg-gradient-to-[#330088] from-[#6A0885] flex flex-col md:flex-row items-center justify-center w-full h-screen
+                <div className="to-[#330088] from-[#81129F] bg-gradient-to-r via-[#5A178E] flex flex-col md:flex-row items-center justify-center w-full h-screen
                  bg-cover bg-center z-10 md:bg-none" key={project.title} id={project.title}>
                     <div className="relative flex flex-col md:max-w-5xl justify-center h-full">
                         <a href={project.link}>
