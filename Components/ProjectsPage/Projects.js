@@ -1,10 +1,10 @@
 const Projects = [
     {
-        title: "TeachMe",
-        description: "A mobile app for revision and learning. Made using React Native. Currently in development.",
+        title: "StudySense",
+        description: "<em>Studying Smarter, Not Harder with StudySense.</em> <br> <br> A mobile app for revision and learning. Made using React Native. Currently in development.",
         detailedDesc: "",
-        image: "/Images/TeachMe.png",
-        link: "https://github.com/Flippergail/TeachMe-React-Native-JS",
+        image: "/Images/StudySense.png",
+        link: "https://studysense.app",
         imageWidth: 1230,
         imageHeight: 691,
     },
