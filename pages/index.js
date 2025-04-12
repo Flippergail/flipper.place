@@ -16,63 +16,46 @@ const sections = [{title: "Home"}, ...Projects];
 const downArrowPressed = () => {
   document.getElementById("Projects").scrollIntoView({behavior: "smooth"});
 }
-
 export default function Home() {
   const [showDownArrow, setShowDownArrow] = useState(true);
+  
   useEffect(() => {
+    let ticking = false;
+    let frameId;
+    
     function handleScroll() {
-      const handleScrollDebounced = debounce(() => {
-        if (window.scrollY > window.innerHeight - 1) {
-          setShowDownArrow(false);
-        } else {
-          setShowDownArrow(true);
-        }
-      }, 50);
-
-      window.addEventListener('scroll', handleScrollDebounced);
-      return () => window.removeEventListener('scroll', handleScrollDebounced);
-    }
-
-    function debounce(func, delay) {
-      let timeoutId;
-      return function () {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          func.apply(this, arguments);
-        }, delay);
-      };
-    }
-
-    handleScroll();
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      sections.forEach((section) => {
-        const element = document.getElementById(section.title);
-        const { top } = element.getBoundingClientRect();
-        const scale = Math.max(0, 1 - top / window.innerHeight);
-        element.style.transform = `scale(${scale})`;
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > window.innerHeight-1) {
+      // Arrow visibility logic
+      if (window.scrollY > window.innerHeight - 1) {
         setShowDownArrow(false);
       } else {
         setShowDownArrow(true);
       }
+      
+      // Scale animations for sections
+      if (!ticking) {
+        frameId = requestAnimationFrame(() => {
+          sections.forEach((section) => {
+            const element = document.getElementById(section.title);
+            if (element) {
+              const { top } = element.getBoundingClientRect();
+              const scale = Math.max(0, 1 - top / window.innerHeight);
+              element.style.transform = `scale(${scale})`;
+            }
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     }
+    
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(frameId);
+    };
   }, []);
+
   return (
     <>
       <Head>
