@@ -1,10 +1,10 @@
 const Projects = [
     {
         title: "StudySense",
-        description: "<em>Studying Smarter, Not Harder with StudySense.</em> <br> <br> A mobile app for revision and learning. Made using React Native. Currently in development.",
+        description: "An impressive mobile app for students to study with. Developed using React Native. Available on both the Apple App Store and Google Play Store with just under 200 users. <br> <br> Includes offline capabilities which manage the switch between using an offline data storage and the backend data storage seemlesly, and the latest apple live activities features integrated natively in swift.",
         detailedDesc: "",
         image: "/Images/StudySense.png",
-        link: "https://studysense.app",
+        link: "https://studysense.co.uk",
         imageWidth: 1230,
         imageHeight: 691,
     },
@@ -20,9 +20,9 @@ const Projects = [
     {
         title: "SnellRun",
         description: "A 2d game in the style of google dinausor. Made using Next.js + Tailwind and react-three-fiber.",
-        detailedDesc: "A 2d game in the style of google dinausor. Made using Next.js + Tailwind and react-three-fiber for the actual game part of the website. I made the game as a light hearted entry to a school STEM competition which went on to win and have almost 1000 different people play. Being built to work well on both desktop and mobile.",
+        detailedDesc: "A 2d game in the style of google dinausor. Developed to work smoothly on both desktop and mobile using Next.js and react-three-fiber. I programmed the game as a light hearted entry to a school STEM competition, it won the competition and was played by over 1000 people.",
         image: "/Images/SnellRun.png",
-        link: "https://snellrun.com/",
+        link: "https://snell-run.vercel.app/",
         imageWidth: 1200,
         imageHeight: 613,
     },

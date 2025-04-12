@@ -38,11 +38,6 @@ export default function NavBar() {
                         onClick={()=>document.getElementById("Projects").scrollIntoView({behavior: "smooth"})}>Projects</a>
                         <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text duration-200"/>
                     </li>
-                    <li className="group items-center">
-                        <a className="text-text text-l lg:text-2xl font-semibold" 
-                        onClick={()=>document.getElementById("About").scrollIntoView({behavior: "smooth"})}>About</a>
-                        <div className="rounded-full ml-[20%] mr-[20%] flex-grow h-0.5 group-hover:bg-text duration-200"/>
-                    </li>
                 </ul>
             </nav>
 
