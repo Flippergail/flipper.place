@@ -1,12 +1,12 @@
 const Projects = [
     {
         title: "StudySense",
-        description: "An impressive mobile app for students to study with. Developed using React Native. Available on both the Apple App Store and Google Play Store with just under 200 users. <br> <br> Includes offline capabilities which manage the switch between using an offline data storage and the backend data storage seemlesly, and the latest apple live activities features integrated natively in swift.",
+        description: "Mobile study app (React Native) with offline capabilities which manage the switch between using user's offline backup and cloud storage seemlesly. <br> <br>Also makes use of latest apple live activities features integrated natively in swift. Published on the App Store and Google Play Store (200 users).",
         detailedDesc: "",
         image: "/Images/StudySense.png",
         link: "https://studysense.co.uk",
-        imageWidth: 1230,
-        imageHeight: 691,
+        imageWidth: 1845,
+        imageHeight: 1030,
     },
     {
         title: "C++ Chess Engine",
@@ -19,13 +19,13 @@ const Projects = [
     },
     {
         title: "SnellRun",
-        description: "A 2d game in the style of google dinausor. Developed to work smoothly on both desktop and mobile using Next.js and react-three-fiber. I programmed the game as a light hearted entry to a school STEM competition, it won the competition and was played by over 1000 people.",
+        description: "A 2d game in the style of google dinausor. Developed to work smoothly on both desktop and mobile using Next.js and react-three-fiber. <br> <br>Winner of school STEM competition and played by 1000+ users.",
         detailedDesc: "",
         image: "/Images/SnellRun.png",
         link: "https://snell-run.vercel.app/",
-        imageWidth: 1200,
-        imageHeight: 613,
+        imageWidth: 1620,
+        imageHeight: 827,
     },
-]
+];
 
 module.exports = Projects;

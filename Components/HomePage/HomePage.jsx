@@ -21,7 +21,7 @@ export default function HomePage() {
             />*/}
             <canvas className="absolute" id="gradient-canvas" data-transition-in />
 
-            <p className="z-10 pt-6 lg:pt-0 text-text text-4xl md:hidden lg:block lg:text-6xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Full Stack<br/>Developer living in<br/>the UK.</p>
+            <p className="z-10 pt-6 lg:pt-0 text-text text-4xl md:hidden lg:block lg:text-6xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Developer<br/>living in the UK.</p>
             
             <p className="z-10 pt-8 hidden md:block lg:hidden text-text text-2xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Developer living in<br/>the UK.</p>
 

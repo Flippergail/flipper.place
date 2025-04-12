@@ -24,7 +24,7 @@ export default function NavBar() {
                 />
             </div>
 
-            <p className="md:self-center text-text text-3xl md:text-5xl font-semibold">flipper.place</p>
+            <p className="md:self-center text-text text-3xl md:text-5xl font-semibold">My Portfolio</p>
             
             <nav className="hidden md:block items-center">
                 <ul className="list-none flex gap-3 relative items-center">
