@@ -19,11 +19,11 @@ export default function HomePage() {
                 className="-z-10 object-cover"
                 priority
             />*/}
-            <canvas className="absolute" id="gradient-canvas" data-transition-in />
+            {/*<canvas className="absolute" id="gradient-canvas" data-transition-in />*/}
 
-            <p className="z-10 pt-6 lg:pt-0 text-text text-4xl md:hidden lg:block lg:text-6xl leading-tight font-semibold">Hello, my name is<br/>Tristan.<br/><br/>I am a Developer<br/>living in the UK.</p>
+            <p className="z-10 pt-6 lg:pt-0 text-text text-4xl md:hidden lg:block lg:text-5xl leading-tight font-semibold">Hello, my name is<br/>Tristan Carter.<br/><br/>I am an aspiring Developer<br/>currently living in the UK.</p>
             
-            <p className="z-10 pt-8 hidden md:block lg:hidden text-text text-2xl leading-tight font-semibold">Hello, my name is Tristan.<br/>I am a Developer living in<br/>the UK.</p>
+            <p className="z-10 pt-8 hidden md:block lg:hidden text-text text-2xl leading-tight font-semibold">Hello, my name is Tristan Carter.<br/>I am a an aspiring Developer currently <br/> living in the UK.</p>
 
             <div className="relative animate-float">
                 <Image

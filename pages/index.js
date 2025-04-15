@@ -9,6 +9,8 @@ import AboutPage from '/Components/AboutPage/AboutPage';
 import DownArrow from '/public/Images/DownArrow.svg';
 import Projects from '/Components/ProjectsPage/Projects';
 
+import { Gradient } from '/Components/HomePage/Gradient.js'
+
 const sections = [{ title: "Home" }, ...Projects];
 
 const downArrowPressed = () => {
@@ -128,15 +130,21 @@ export default function Home() {
     };
   }, [showDownArrow, mousePosition]);
 
+  useEffect(() => {
+    const gradient = new Gradient()
+    gradient.initGradient('#gradient-canvas')
+}, [])
+
   return (
     <>
       <Head>
-        <title>Tristan&apos;s Portfolio</title>
-        <meta name="description" content="Tristan&apos;s official portfolio made using Next.js + Tailwind" />
+        <title>Tristan Carter&apos;s Portfolio</title>
+        <meta name="description" content="Tristan Carter&apos;s official portfolio website made using Next.js + Tailwind" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Images/FlipperPFP.png" />
       </Head>
       <main ref={mainRef} className='to-[#330088] from-[#81129F] bg-gradient-to-r via-[#5A178E] select-none w-full overflow-hidden transition-all duration-1000'>
+        <canvas className="absolute" id="gradient-canvas" data-transition-in />
         <NavBar />
         <HomePage />
         <ProjectsPage />
