@@ -138,8 +138,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Tristan Carter&apos;s Portfolio</title>
-        <meta name="description" content="Tristan Carter&apos;s official portfolio website made using Next.js + Tailwind" />
+        <title>Tristan Carter</title>
+        <meta name="description" content="Official portfolio of Tristan Carter developed in Next.js" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Images/FlipperPFP.png" />
       </Head>
