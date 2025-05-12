@@ -141,7 +141,7 @@ export default function Home() {
         <title>Tristan Carter</title>
         <meta name="description" content="Official portfolio of Tristan Carter developed in Next.js" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Images/FlipperPFP.png" />
+        <link rel="icon" href="/public/Images/PortfolioWebsiteIcon.png" />
       </Head>
       <main ref={mainRef} className='to-[#330088] from-[#81129F] bg-gradient-to-r via-[#5A178E] select-none w-full overflow-hidden transition-all duration-1000'>
         <canvas className="absolute" id="gradient-canvas" data-transition-in />
