@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Document() {
   return (
@@ -11,6 +12,7 @@ export default function Document() {
       <body className="w-full h-full" data-hijacking="on" data-animation="scaleDown">
         <Main />
         <NextScript />
+        <Analytics />
       </body>
     </Html>
   )
